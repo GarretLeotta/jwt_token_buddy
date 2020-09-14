@@ -1,0 +1,5 @@
+#compiled/cached stuff
+__pycache__/
+*.py[cod]
+*$py.class
+*.pem

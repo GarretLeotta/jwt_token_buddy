@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  auth:
+    restart: always
+    build: ./auth
+    ports:
+      - 5050:5050
+    env_file:
+      - ./.env.dev
+    volumes:
+      - ./auth:/jwt_auth
+  app:
+    restart: always
+    build: ./app
+    ports:
+      - 5060:5060
+    env_file:
+      - ./.env.dev
+    volumes:
+      - ./app:/jwt_app
